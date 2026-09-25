@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Manipulation</title>
+
+    <style>
+
+        .box {
+            background-color: lightblue;
+            border: 3px solid green;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .newbox {
+            background-color: lightpink;
+            border: 20px solid green;
+            border-radius: 20px;
+            padding: 50px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="box" id="box">
+
+        <h2 id="title">Welcome Students</h2>
+
+        <p id="message"></p>
+
+        <img
+            id="myImage"
+            src="https://picsum.photos/600/400?random=10"
+            width="300"
+            alt="Random Image"
+        >
+
+        <br><br>
+
+        <a
+            id="myLink"
+            href="https://www.google.com"
+            target="_blank"
+        >
+            Visit Google
+        </a>
+
+        <br><br>
+
+
+        <!-- Change Style -->
+
+        <button onclick="changeStyle()">
+            Change Style
+        </button>
+
+        <br><br>
+
+
+        <!-- Change Content -->
+
+        <button onclick="changeContent()">
+            Change Content
+        </button>
+
+        <br><br>
+
+
+        <!-- Change Link -->
+
+        <button onclick="changeLink()">
+            Change Link
+        </button>
+
+        <br><br>
+
+
+        <!-- Change Image -->
+
+        <button onclick="changeImage()">
+            Change Image
+        </button>
+
+        <br><br>
+
+
+        <!-- Change Class -->
+
+        <button onclick="changeClass()">
+            Change Class
+        </button>
+
+    </div>
+
+
+    <script>
+
+        // ============================
+        // Change Style
+        // ============================
+
+        function changeStyle() {
+
+            document.getElementById("box").style.backgroundColor =
+                "lightblue";
+
+            document.getElementById("box").style.padding =
+                "20px";
+
+            document.getElementById("title").style.color =
+                "red";
+
+            document.getElementById("title").style.fontSize =
+                "30px";
+
+        }
+
+
+        // ============================
+        // Change Content
+        // ============================
+
+        function changeContent() {
+
+            document.getElementById("title").textContent =
+                "Hello Students!";
+
+            document.getElementById("message").textContent =
+                "The content has been changed using JavaScript DOM manipulation.";
+
+        }
+
+
+        // ============================
+        // Change Link
+        // ============================
+
+        function changeLink() {
+
+            let link = document.getElementById("myLink");
+
+            link.href = "https://www.wikipedia.org";
+
+            link.textContent = "Visit Wikipedia";
+
+        }
+
+
+        // ============================
+        // Change Image
+        // ============================
+
+        function changeImage() {
+
+            document.getElementById("myImage").src =
+                "https://picsum.photos/600/400?random=20";
+
+        }
+
+
+        // ============================
+        // Change Class
+        // ============================
+
+        function changeClass() {
+
+            document.getElementById("box").classList.add("newbox");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
